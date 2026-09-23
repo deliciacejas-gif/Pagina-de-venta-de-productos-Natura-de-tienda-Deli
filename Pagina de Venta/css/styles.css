@@ -1,0 +1,82 @@
+:root {
+    font-size: 16px;
+}
+/* Configuracion general*/
+body {
+    background-image: linear-gradient(to left, pink, orange);
+    height: 100px;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 2px;
+    margin: 0;
+    padding: 1rem 2rem;
+}
+a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    }  
+:hover{
+    color: #d80d0d;
+    text-decoration:none;
+    transform: scale(1,0.955);
+}
+/*Encabezadso y titulos*/
+h1 {
+    font-weight: 20;
+    color: rgba(219, 5, 91, 0.941);
+    text-align: center;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+}
+@mixin estilo-imagen($alto)
+{
+    height: $alto;
+}
+.Cuidados img,
+.Niños img,
+.Perfumeria img {
+    @include estilo-imagen(500px);
+}
+
+.Promociones img {
+    height: 400px;
+    display: block;
+}
+
+.insta img{
+    height: 25px;
+    display:block;
+}
+.container {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+@media (max-width:768px)
+{
+.container{
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+@media (min-whith:1024px)
+{
+    .container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+footer{
+    line-height: 1.8;
+}
+footer p{
+    margin-bottom: 12px;
+}
